@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?actionBarSize">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activityPadding"
+                    android:layout_marginEnd="@dimen/activityPadding"
+                    android:layout_marginBottom="@dimen/activityPadding"
+                    android:elevation="1dp"
+                    app:cardCornerRadius="16dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/view_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmer_view_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            shimmer:duration="500">
+
+                            <include layout="@layout/detail_data_placeholder" />
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile"
+                                android:layout_width="135dp"
+                                android:layout_height="135dp"
+                                android:layout_marginTop="15dp"
+                                app:civ_border_color="@color/black"
+                                app:civ_border_width="5dp"
+                                tools:src="@drawable/user1" />
+
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/montserrat"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/profile"
+                                app:layout_constraintStart_toStartOf="@+id/profile"
+                                app:layout_constraintTop_toBottomOf="@+id/profile"
+                                tools:text="John Doe" />
+
+                            <TextView
+                                android:id="@+id/tv_company"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                                tools:text="Google, Inc" />
+
+                            <TextView
+                                android:id="@+id/tv_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:textSize="15sp"
+                                app:drawableStartCompat="@drawable/location"
+                                app:layout_constraintEnd_toEndOf="@+id/tv_company"
+                                app:layout_constraintStart_toStartOf="@+id/tv_company"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_company"
+                                tools:text="USA" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="15dp"
+                                android:padding="@dimen/activity_horizontal_margin"
+                                android:theme="@style/cardTextColor"
+                                app:cardBackgroundColor="@color/black"
+                                app:cardCornerRadius="15dp">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/followers"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="30dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:text="@string/follower"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/followers_count"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <TextView
+                                        android:id="@+id/following"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:text="@string/following"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/repos"
+                                        app:layout_constraintHorizontal_bias="0.437"
+                                        app:layout_constraintStart_toEndOf="@+id/followers"
+                                        app:layout_constraintTop_toBottomOf="@+id/following_count" />
+
+                                    <TextView
+                                        android:id="@+id/repos"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="30dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:text="@string/repository"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/followers_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/activity_horizontal_margin"
+                                        android:textSize="23sp"
+                                        app:layout_constraintEnd_toEndOf="@+id/followers"
+                                        app:layout_constraintStart_toStartOf="@+id/followers"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="505" />
+
+
+                                    <TextView
+                                        android:id="@+id/following_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/activity_horizontal_margin"
+                                        android:textSize="23sp"
+                                        app:layout_constraintEnd_toEndOf="@+id/following"
+                                        app:layout_constraintStart_toStartOf="@+id/following"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="505" />
+
+                                    <TextView
+                                        android:id="@+id/repos_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/activity_horizontal_margin"
+                                        android:textSize="23sp"
+                                        app:layout_constraintEnd_toEndOf="@+id/repos"
+                                        app:layout_constraintStart_toStartOf="@+id/repos"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="505" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black"
+                android:theme="@style/ToolbarFont"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:tabTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/favorite"
+        android:src="@drawable/unfavorite"
+        app:borderWidth="0dp"
+        app:tint="@color/white"
+        app:backgroundTint="@color/black"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

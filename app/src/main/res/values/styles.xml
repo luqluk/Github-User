@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="splashLogo" format="reference"/>
+
+    <style name="ToolbarFont" >
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GithubUser</string>
+    <string name="follower">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="repository">Repos</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="search">Pencarian</string>
+    <string name="setting">Pengaturan</string>
+    <string name="github_user">Pengguna Github</string>
+    <string name="caution_input">Silahkan Masukkan Kata</string>
+    <string name="empty">Tidak Ditemukan</string>
+    <string name="no_internet">Tidak Ada Koneksi</string>
+    <string name="language">Bahasa</string>
+    <string name="summary_language">Pilih Bahasa</string>
+    <string name="settings">Pengaturan</string>
+    <string name="reminder">Pengingat</string>
+    <string name="notification_title">Pengingat</string>
+    <string name="notification_text">Temukan orang populer untuk difork !!!</string>
+    <string name="reminder_off">Pengingat Off</string>
+    <string name="reminder_on">Pengingat On</string>
+    <string name="favorite">favorite</string>
+    <string name="favorite_add">%s Ditambahkan ke Favorite</string>
+    <string name="favorite_remove">%s Dihapus dari Favorite</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="auto">Otomatis</string>
+    <string name="mode_on">Mode Malam</string>
+    <string name="mode_off">Mode Siang</string>
+    <string name="theme_summary">Klik untuk merubah mode malam atau siang</string>
+    <string name="favorite_user">Pengguna Favorit</string>
+    <string name="widget_on_message">Widget favorit diaktifkan</string>
+    <string name="widget_off_message">Widget favorit dinonaktifkan</string>
+</resources>

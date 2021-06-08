@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">GithubUser</string>
+    <string name="follower">Follower</string>
+    <string name="following">Following</string>
+    <string name="repository">Repos</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="search">Search</string>
+    <string name="setting">Settings</string>
+    <string name="github_user">Github User</string>
+    <string name="caution_input">Please Input The Words</string>
+    <string name="empty">Not Found</string>
+    <string name="no_internet">No Connection</string>
+    <string name="language">Language</string>
+    <string name="summary_language">Select Language</string>
+    <string name="key_language" translatable="false">key_language</string>
+    <string name="settings">Settings</string>
+    <string name="reminder">Reminder</string>
+    <string name="key_notification" translatable="false">key_notification</string>
+    <string name="notification_title">Reminder</string>
+    <string name="notification_text">Find popular people to fork !!!</string>
+    <string name="reminder_off">Reminder Off</string>
+    <string name="reminder_on">Reminder On</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorite_add">%s Add To Favorite</string>
+    <string name="favorite_remove">%s Remove From Favorite</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="key_theme" translatable="false">key_theme</string>
+    <string name="night_off" translatable="false">off</string>
+    <string name="night_on" translatable="false">on</string>
+    <string name="night_auto" translatable="false">auto</string>
+    <string name="auto">Automatic</string>
+    <string name="mode_on">Dark Mode</string>
+    <string name="mode_off">Light Mode</string>
+    <string name="theme_summary">Click to change dark or light mode</string>
+    <string name="favorite_user">Favorite User</string>
+    <string name="widget_on_message">Favorite Widget Activated</string>
+    <string name="widget_off_message">Favorite widget deactivated</string>
+
+    <array name="theme">
+        <item>@string/auto</item>
+        <item>@string/mode_on</item>
+        <item>@string/mode_off</item>
+    </array>
+    <array name="theme_value">
+        <item>@string/night_auto</item>
+        <item>@string/night_on</item>
+        <item>@string/night_off</item>
+    </array>
+
+</resources>

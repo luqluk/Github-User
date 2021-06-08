@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/language">
+        <Preference
+            android:key="@string/key_language"
+            android:summary="@string/summary_language"
+            android:title="@string/language"
+            app:allowDividerBelow="true" />
+    </PreferenceCategory>
+    <SwitchPreference
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:defaultValue="false"
+        app:key="@string/key_notification"
+        app:title="@string/reminder" />
+
+    <ListPreference
+        android:defaultValue="@string/night_auto"
+        android:dialogTitle="@string/dark_theme"
+        android:entries="@array/theme"
+        android:entryValues="@array/theme_value"
+        android:summary="@string/theme_summary"
+        android:title="@string/dark_theme"
+        app:allowDividerAbove="true"
+        app:key="@string/key_theme" />
+
+
+</PreferenceScreen>
